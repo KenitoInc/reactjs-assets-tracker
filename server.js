@@ -5,9 +5,6 @@ require('node-jsx').install();
 var express = require('express'),
     exphbs = require('express-handlebars'),
     React = require('react'),    
-    /*laptops = require('./routes/laptops'),
-    phones = require('./routes/phones'),
-    branch = require('./routes/branch'),*/
     routes = require('./src-es5/routes/index'),
     bodyParser = require('body-parser'),
     logger = require('morgan'),
@@ -44,13 +41,6 @@ app.use('/api', api);
 
 // Index Route
 app.use('/', routes);
-/*app.get('/laptops/:id', laptops.view);
-app.get('/laptops/search/:key', laptops.search);
-app.get('/laptops/edit/:id', laptops.edit);
-app.get('/phones', phones.index);
-app.get('/branch', branch.index);
-app.get('/audit', routes.audit);
-app.get('/about', routes.about);*/
 
 app.listen(app.get('port'), function () {
     console.log('Magic happens at port: ' + app.get('port'));
